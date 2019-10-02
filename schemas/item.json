@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "name": {" type": "string" },
+    "quantity": { "type": "integer", "minimum": 1 },
+    "price": { "type": "number", "minimum": 0 },
+    "currency": { "type": "string" }
+  }
+}

@@ -1,9 +1,21 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express')
+const itemController = require('../controllers/itemController')
+const currencyController = require('../controllers/currency')
+const router = express.Router()
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+// GET Currencies.
+router.get('/currencies', currencyController.currencyList)
 
-module.exports = router;
+// POST request for creating Item.
+router.post('/item', itemController.itemCreate)
+
+// DELETE request for deliting Item.
+router.delete('/item/:id', itemController.itemDelete)
+
+// GET Items list.
+router.get('/items', itemController.itemList)
+
+// GET request for Items sum.
+router.get('/items/sum', itemController.itemSum)
+
+module.exports = router
