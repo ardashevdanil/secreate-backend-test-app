@@ -3,7 +3,7 @@ const itemController = require('../controllers/itemController')
 const currencyController = require('../controllers/currency')
 const router = express.Router()
 
-// GET Currencies.
+// GET Currencies list.
 router.get('/currencies', currencyController.currencyList)
 
 // POST request for creating Item.
